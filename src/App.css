@@ -7,7 +7,7 @@
   --accent-blue: #50A9DE;
   --opacity-92: rgba(255, 255, 255, 0.90);
   --opacity-55: rgba(255, 255, 255, 0.55);
-  
+
   --max-content-width: 1280px;
   --page-padding: 2rem;
 }
@@ -61,7 +61,11 @@ a {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
- 
+  .container {
+    max-width: 425px;
+    padding: 1rem 2rem;
+  }
+  
   
 }
 

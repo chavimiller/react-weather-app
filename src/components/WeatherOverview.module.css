@@ -1,3 +1,55 @@
-.container {
+.bgImage {
+    background-image: url("../assets/images/Rainy.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.infoContainer {
+    padding-top: 3.5rem;
+}
+
+.tempNumber {
+    font-size: 5rem;
+    color: var(--opacity-92);
+    font-weight: 550;
+}
+
+.superScript {
+    color: var(--opacity-92);
+    font-size: 2.2rem;
+    vertical-align: super;
+}
+
+.feelsLike {
+    color: var(--opacity-55);
+    font-size: 1.3rem;
+    font-weight: 300;
     display: flex;
+}
+
+.feelsLike > .superScript {
+    color: var(--opacity-55);
+    font-size: 1rem;
+    
+}
+
+.bottomLine {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    color: var(--opacity-92);
+    font-size: 1.3rem;
+    padding: .8rem 0 1rem 0;
+}
+
+.weatherDetailBox {
+    width: 100%;
+    height: 70vh;
+    background-color: var(--primary-light);
+    transform: translateY(-1rem);
+    border-radius: 3rem;
+    z-index: 5;
 }
