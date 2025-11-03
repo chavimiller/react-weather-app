@@ -1,9 +1,13 @@
 :root {
 
-  --primary-light: #E5D5C7;
-  --primary-dark: #210B08;
-  --secondary: #8C6340;
-  --accent: #F8A0B9;
+  --primary-light: #FFFFFF;
+  --primary-dark: #4B4B4B;
+  --secondary: #F0F0F0;
+  --accent-orange: #F5A10C;
+  --accent-blue: #50A9DE;
+  --opacity-92: rgba(255, 255, 255, 0.90);
+  --opacity-55: rgba(255, 255, 255, 0.55);
+  
   --max-content-width: 1280px;
   --page-padding: 2rem;
 }
