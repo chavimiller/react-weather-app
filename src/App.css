@@ -12,18 +12,22 @@
   --page-padding: 2rem;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter.ttf");
+}
+
 body, html {
-  font-family: "Montserrat", sans-serif;
   width: 100%;
   background-color: var(--primary-light);
   color: var(--primary-dark);
+  font-family: "Inter";
 }
 
 * {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-
 }
 
 @font-face {
