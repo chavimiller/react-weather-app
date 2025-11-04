@@ -11,10 +11,23 @@
 .roundedBox {
     background-color: var(--primary-light);
     border-radius: 3.5rem 3.5rem 0 0;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     height: 100%;
 }
 
 .detailTitle {
     font-size: 1rem;
+    padding: 0 1.2rem;
+}
+
+.hourlyFrame {
+    color: var(--primary-dark);
+    display: flex;
+    justify-content: space-around;
+    padding: .3rem;
+    margin: 1rem 0;
+    border: solid 1px var(--secondary);
+    border-radius: 1.5rem;
+    font-weight: 400;
+    font-size: .9rem;
 }

@@ -1,3 +1,4 @@
+import HourlyData from "./HourlyData";
 import styles from "./WeatherDetail.module.css";
 
 const WeatherDetail = () => {
@@ -6,6 +7,12 @@ const WeatherDetail = () => {
       <div className={styles.container}>
         <div className={styles.roundedBox}>
           <div className={styles.detailTitle}>Hourly Forecast</div>
+          <div className={styles.hourlyFrame}>
+            <HourlyData desc={"Sunny"} degrees={"21"} time={"6:00am"} />
+            <HourlyData desc={"Sunny"} degrees={"22"} time={"7:00am"} />
+            <HourlyData desc={"Cloudy"} degrees={"24"} time={"8:00am"} />
+            <HourlyData desc={"Cloudy"} degrees={"25"} time={"9:00am"} />
+          </div>
         </div>
       </div>
     </>
