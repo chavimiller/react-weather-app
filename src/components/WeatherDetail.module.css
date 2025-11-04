@@ -1,3 +1,20 @@
 .container {
     display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    transform: translateY(-4.5rem);
+    z-index: 5;
+}
+
+.roundedBox {
+    background-color: var(--primary-light);
+    border-radius: 3.5rem 3.5rem 0 0;
+    padding: 2rem 1.5rem;
+    height: 100%;
+}
+
+.detailTitle {
+    font-size: 1rem;
 }

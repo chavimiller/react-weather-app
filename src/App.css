@@ -67,9 +67,8 @@ a {
 @media (min-width: 320px) and (max-width: 480px) {
   .container {
     max-width: 425px;
-    padding: 1rem 2rem;
+    padding: 1rem 1.6rem;
   }
-  
   
 }
 
