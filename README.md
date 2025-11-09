@@ -1,1 +1,3 @@
+# react-weather-app
+
 This project is a React-based weather dashboard rebuilt from a previous version I developed with vanilla JavaScript. The goal of this version is to create a more responsive, scalable, and maintainable application—starting with a mobile-first design approach. It uses the Visual Crossing Weather API to fetch real-time weather data, displaying current conditions, temperature, and descriptive icons for any searched location. The app’s modular component structure, custom hooks, and clean UI focus on improving performance, reusability, and overall user experience compared to the original version
