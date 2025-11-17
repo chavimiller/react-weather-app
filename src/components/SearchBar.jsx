@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useWeatherContext } from "../context/WeatherContext";
 
 const SearchBar = () => {
-  const { location, setLocation } = useWeatherContext();
+  const { location, setLocation, weather } = useWeatherContext();
   const [value, setValue] = useState("");
 
   function handleChange(e) {
