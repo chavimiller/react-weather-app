@@ -1,8 +1,15 @@
 import SearchBar from "./SearchBar";
-import WeatherDetail from "./WeatherDetail";
 import styles from "./WeatherOverview.module.css";
+import { useWeather } from "../hooks/useWeather";
+import { useWeatherContext } from "../context/WeatherContext";
 
 const WeatherOverview = () => {
+  const { weather, loading, error } = useWeatherContext();
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error} </div>;
+  if (!weather) return null;
+
   return (
     <>
       <div className={styles.infoContainer}>

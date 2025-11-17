@@ -1,8 +1,11 @@
+import { useWeatherContext } from "../context/WeatherContext";
 import HourlyData from "./HourlyData";
 import styles from "./WeatherDetail.module.css";
 import { WeatherStats } from "./WeatherStats";
 
 const WeatherDetail = () => {
+  const { weather, loading, error } = useWeatherContext();
+
   return (
     <>
       <div className={styles.container}>
