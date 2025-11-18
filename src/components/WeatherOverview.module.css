@@ -14,6 +14,7 @@
     height: 18rem;
 }
 
+
 .topInfo {
     display: flex;
     flex-direction: column;
@@ -26,6 +27,8 @@
     font-size: 4.6rem;
     color: var(--opacity-92);
     font-weight: 550;
+    cursor: pointer;
+    
 }
 
 .superScript {
@@ -54,4 +57,14 @@
     color: var(--opacity-92);
     font-size: 1.2rem;
     padding: .8rem 0 1rem 0;
+}
+
+.location {
+    text-align: end;
+    max-width: 12rem;
+}
+
+.wordDesc {
+    text-align: start;
+    max-width: 10rem;
 }

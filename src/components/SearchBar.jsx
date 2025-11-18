@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useWeatherContext } from "../context/WeatherContext";
 
 const SearchBar = () => {
-  const { location, setLocation, weather } = useWeatherContext();
+  const { location, setLocation } = useWeatherContext();
   const [value, setValue] = useState("");
 
   function handleChange(e) {
@@ -12,10 +12,17 @@ const SearchBar = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setLocation(value);
+    setLocation(capitalize(value));
     setValue("");
     console.log(location, "location");
     console.log(value, "value");
+  }
+
+  function capitalize(str) {
+    return str
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   }
 
   return (

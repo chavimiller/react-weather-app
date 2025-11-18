@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    transform: translateY(-4.5rem);
+    transform: translateY(-3.5rem);
     z-index: 5;
 }
 
