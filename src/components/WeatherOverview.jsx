@@ -3,6 +3,7 @@ import styles from "./WeatherOverview.module.css";
 import { useWeatherContext } from "../context/WeatherContext";
 import { iconConditions } from "../utils/weatherImages";
 import { useState } from "react";
+import { convertUnit, convertTemp } from "../utils/tempConversion";
 
 const WeatherOverview = () => {
   const { weather, loading, error } = useWeatherContext();
@@ -19,17 +20,6 @@ const WeatherOverview = () => {
   const match = weatherImages.find(
     (item) => item.icon === weather.currentConditions.icon
   );
-
-  const convertUnit = () => {
-    setUnit((prev) => (prev === "°C" ? "°F" : "°C"));
-  };
-
-  const convertTemp = (temp, unit) => {
-    if (unit === "°C") {
-      return ((temp - 32) * 5) / 9;
-    }
-    return temp;
-  };
 
   return (
     <>
