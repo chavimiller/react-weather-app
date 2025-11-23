@@ -1,4 +1,5 @@
 import "./App.css";
+import DesktopWarning from "./components/DesktopWarning";
 import WeatherDetail from "./components/WeatherDetail";
 import WeatherOverview from "./components/WeatherOverview";
 import { useWeatherContext } from "./context/WeatherContext";
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <>
+      <DesktopWarning />
       <WeatherOverview />
       <WeatherDetail />
     </>
