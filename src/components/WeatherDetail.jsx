@@ -6,16 +6,37 @@ import { WeatherStats } from "./WeatherStats";
 const WeatherDetail = () => {
   const { weather, loading, error } = useWeatherContext();
 
+  const condition = (hour) => {
+    return weather.days[0].hours[hour].conditions === "Partially cloudy"
+      ? "Cloudy"
+      : weather.days[0].hours[hour].conditions;
+  };
   return (
     <>
       <div className={styles.container}>
         <div className={styles.roundedBox}>
           <div className={styles.detailTitle}>Hourly Forecast</div>
           <div className={styles.hourlyFrame}>
-            <HourlyData desc={"Sunny"} degrees={"21"} time={"6:00am"} />
-            <HourlyData desc={"Sunny"} degrees={"22"} time={"7:00am"} />
-            <HourlyData desc={"Cloudy"} degrees={"24"} time={"8:00am"} />
-            <HourlyData desc={"Cloudy"} degrees={"25"} time={"9:00am"} />
+            <HourlyData
+              desc={condition(19)}
+              degrees={Math.round(weather.days[0].hours[19].temp)}
+              time={"6:00am"}
+            />
+            <HourlyData
+              desc={condition(20)}
+              degrees={Math.round(weather.days[0].hours[20].temp)}
+              time={"7:00am"}
+            />
+            <HourlyData
+              desc={condition(21)}
+              degrees={Math.round(weather.days[0].hours[21].temp)}
+              time={"8:00am"}
+            />
+            <HourlyData
+              desc={condition(22)}
+              degrees={Math.round(weather.days[0].hours[22].temp)}
+              time={"9:00am"}
+            />
           </div>
           <div className={styles.statsFrame}>
             <WeatherStats

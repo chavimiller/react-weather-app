@@ -23,7 +23,7 @@
 .hourlyFrame {
     color: var(--primary-dark);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: .3rem;
     margin: 1rem 0;
     border: solid 1px var(--secondary);
@@ -35,7 +35,7 @@
 .statsFrame {
     color: var(--primary-dark);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 1rem 0;
     font-weight: 400;
     font-size: .9rem;
