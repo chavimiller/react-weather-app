@@ -2,13 +2,10 @@ import SearchBar from "./SearchBar";
 import styles from "./WeatherOverview.module.css";
 import { useWeatherContext } from "../context/WeatherContext";
 import { iconConditions } from "../utils/weatherImages";
-import { useState } from "react";
-import { convertUnit, convertTemp } from "../utils/tempConversion";
+import { convertTemp } from "../utils/tempConversion";
 
 const WeatherOverview = () => {
-  const { weather, loading, error } = useWeatherContext();
-
-  const [unit, setUnit] = useState("°C");
+  const { weather, loading, error, unit, toggleUnit } = useWeatherContext();
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error} </div>;
@@ -34,7 +31,7 @@ const WeatherOverview = () => {
         ></div>
         <div className={styles.topInfo}>
           <SearchBar />
-          <div onClick={convertUnit} className={styles.tempNumber}>
+          <div onClick={toggleUnit} className={styles.tempNumber}>
             {Math.round(convertTemp(weather.currentConditions.temp, unit))}
             <span className={styles.superScript}>{unit}</span>
           </div>

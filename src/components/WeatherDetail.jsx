@@ -3,12 +3,15 @@ import { useWeatherContext } from "../context/WeatherContext";
 import HourlyData from "./HourlyData";
 import styles from "./WeatherDetail.module.css";
 import { WeatherStats } from "./WeatherStats";
+import { convertTemp } from "../utils/tempConversion";
 import { format } from "date-fns-tz";
 
 const WeatherDetail = () => {
-  const { weather, loading } = useWeatherContext();
+  const { weather, loading, error, unit } = useWeatherContext();
 
-  if (loading || !weather) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error} </div>;
+  if (!weather) return null;
 
   const currentHour = new Date().getHours();
 
@@ -19,7 +22,7 @@ const WeatherDetail = () => {
   };
 
   const degrees = (hour) => {
-    return Math.round(weather.days[0].hours[hour].temp);
+    return Math.round(convertTemp(weather.days[0].hours[hour].temp, unit));
   };
 
   const epoch = (hour) => {
